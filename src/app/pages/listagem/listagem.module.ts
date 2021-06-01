@@ -9,7 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
 })
 export class ListagemModule { }

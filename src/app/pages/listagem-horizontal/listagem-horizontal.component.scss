@@ -1,0 +1,148 @@
+body{
+  background-color: #191919;
+}
+
+
+.navbar{
+  background-color: #F5930A;
+}
+
+.imgCard{
+  margin-top: 3px;
+  width: 50px;
+  height: 120px;
+}
+
+.container{
+  margin-right: 30px;
+}
+
+.card-cerv{
+  margin-top: 50px;
+  background-color:#191919 ;
+  border-color: #F5930A;
+  width: 250px;
+  height: 270px;
+  color: #E4E4E4;
+  margin: 10px;
+  align-items: center;
+}
+
+.btn-card{
+  background-color:#191919 ;
+  border-color: #F5930A;
+  color: #F5930A;
+
+
+}
+
+
+
+.btn-troca{
+  margin: auto;
+  background-color:#191919 ;
+  border-color: #F5930A;
+  color: #F5930A;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+
+.card-troca{
+  background-color:#191919 ;
+  text-align: center;
+  color: #F5930A;
+  font-size: 10px;
+  width: 160px;
+  height: 70px;
+  margin-bottom: 90px;
+  margin-left: 100px;
+  border-color: #191919;
+}
+
+#cervejas{
+  color: #F5930A;
+  margin-top: 10px;
+}
+
+.navbar2{
+  background-color: #191919;
+}
+
+
+#pesquisar{
+  height: 45px;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  border-color: #F5930A;
+  color: #F5930A;
+  background-color: #191919;
+}
+#barraPesquisa{
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: #191919;
+  color: #F5930A;
+  border-color: #F5930A;
+  width: 500px;
+  height: 45px;
+}
+
+
+
+.imagem {
+  width: 60px;
+  height: 150px;
+}
+
+  .innerLeft {
+    display:inline-block;
+    margin-right:-4px;
+    vertical-align:top;
+    width:80px;
+    text-align:center;
+    padding:5px;
+  }
+  .innerRight {
+    margin-left: 25px;
+    color: #F5930A;
+    display:inline-block;
+    vertical-align:top;
+    width:70%;
+    text-align:left;
+    padding:5px;
+  }
+  .card-text {
+    display:inline-block;
+    background-color: #191919;
+    color: #F5930A;
+    margin-left: 10px;
+  }
+
+  .card-horizontal{
+   border-radius: 2px;
+   border-color: #F5930A;
+    margin-bottom: 50px;
+    margin-left: 60px;
+  }
+  .btn-card{
+    background-color:#191919 ;
+    border-color: #F5930A;
+    color: #F5930A;
+  }
+
+  .div-btn{
+    text-align: right;
+    margin-top: 10%;
+  }
+
+  .desativado{
+    opacity: 0.3;
+  }
+
+
+
+
+

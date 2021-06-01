@@ -1,16 +1,8 @@
-<nav class="navbar ">
-  <div class="container-fluid">
-    <div class="navbar-brand ">
-      <img src="./img/vaider-amarelo.jpg" alt="" width="50" height="45" class="d-inline-block mh-100">
-      May the beer be whitch you
-    </div>
+<body>
 
-    <div>
-      <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="50" height="45" class="d-inline-block">
-      Sair
-    </div>
-  </div>
-</nav>
+
+
+  <app-cabecalho></app-cabecalho>
 
 <div class="container mt-5">
   <div class="row">
@@ -36,8 +28,42 @@
     <div class="card  text-center card-troca col-4">
       Selecione o tipo de exibição
       <div class="d-flex icons-juntos">
-        <a href="#" class="btn btn-warning btn-troca"><i class="bi bi-table"></i></a>
-        <a href="#" class="btn btn-warning btn-troca"><i class="bi bi-menu-button-wide"></i></a>
+        <a routerLink ="/listagem" class="btn btn-warning btn-troca"><i class="bi bi-table"></i></a>
+        <a  class="desativado btn btn-warning btn-troca"><i class="bi bi-menu-button-wide"></i></a>
       </div>
     </div>
   </div>
+
+
+
+<div class="card-horizontal" *ngFor="let cervs of cervejas">
+
+  <div class="row" >
+        <div class="innerLeft">
+          <img class="imagem" src="{{ cervs.image_url }}">
+        </div>
+        <div class="innerRight">
+          <div class="horizontal-card-footer">
+            <h4 class="card-title">{{ cervs.name }}</h4>
+            <span class="card-text">{{cervs.description}}</span>
+    </div>
+
+    <div class="row">
+      <div class="div-btn">
+        <a routerLink="/detalhes"
+         class="btn  btn-outline-warning btn-card">Veja mais</a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+</div>
+
+
+
+</div>
+
+</body>

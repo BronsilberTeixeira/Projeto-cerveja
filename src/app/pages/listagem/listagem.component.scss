@@ -1,30 +1,51 @@
+body{
+  background-color: #191919;
+}
 
+.navbar{
+  background-color: #F5930A;
+  font-family: sen;
+  position: fixed;
+}
 
 .imgCard{
-  margin-top: 10px;
+  margin-top: 3px;
   width: 50px;
-  height: 150px;
+  height: 120px;
+}
+
+.container{
+  margin-right: 30px;
 }
 
 .card-cerv{
+  text-align: center;
   margin-top: 50px;
   background-color:#191919 ;
   border-color: #F5930A;
-  align-items: center;
   width: 250px;
-  height: 270px;
+  height: 300px;
   color: #E4E4E4;
+  margin: 50px;
+  align-items: center;
 }
 
 .btn-card{
+  margin-top: 10%;
   background-color:#191919 ;
   border-color: #F5930A;
   color: #F5930A;
-  margin-left: 44px;
-  margin-top: 30px;
+
 }
 
+.div-botao{
+  text-align: center;
 
+}
+
+.desativado{
+  opacity: 0.3;
+}
 
 .btn-troca{
   margin: auto;
@@ -42,7 +63,6 @@
   background-color:#191919 ;
   text-align: center;
   color: #F5930A;
-  align-items: center;
   font-size: 10px;
   width: 160px;
   height: 70px;
@@ -67,6 +87,7 @@
   margin: 0 auto;
   border-color: #F5930A;
   color: #F5930A;
+  background-color: #191919;
 }
 #barraPesquisa{
   margin: 0 auto;
@@ -80,9 +101,8 @@
 
 #texto-switch{
 font-size: small;
+text-align: center;
 }
-
-
 
 
 

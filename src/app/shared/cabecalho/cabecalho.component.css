@@ -1,0 +1,17 @@
+
+.navbar{
+  background-color: #F5930A;
+  font-family:Gill Sans, sans-serif
+}
+
+.img-cabecalho{
+  margin-left: 10px;
+  height: 100%;
+  width: 50px;
+}
+
+.img-login{
+  width: 50px;
+  height: 45px;
+  border-radius: 50px;
+}
