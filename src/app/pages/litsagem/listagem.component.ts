@@ -3,12 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, pipe } from 'rxjs';
 import { tap, map, filter, distinctUntilChanged, debounceTime,  switchMap} from 'rxjs/operators';
-import { Cervejas } from './Cervejas';
-import { CervejasService } from './cervejas.service';
+import { Cervejas } from '../../shared/mudules/Cervejas';
+import { CervejasService } from '../../shared/mudules/cervejas.service';
 
 
 @Component({
-  selector: 'app-litsagem',
+  selector: 'app-listagem',
   templateUrl: './listagem.component.html',
   styleUrls: ['./listagem.component.css']
 })
