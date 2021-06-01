@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login/login.component';
-import { LitsagemComponent } from './pages/litsagem/litsagem.component';
+import { ListagemComponent } from './pages/litsagem/listagem.component';
 import { DetalhesComponent } from './pages/detalhes/detalhes.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { ListagemHorizontalComponent } from './pages/listagem-horizontal/listagem-horizontal.component';
@@ -17,7 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     LoginComponent,
-    LitsagemComponent,
+    ListagemComponent,
     DetalhesComponent,
     PaginaNaoEncontradaComponent,
     ListagemHorizontalComponent,

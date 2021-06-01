@@ -9,10 +9,10 @@ import { CervejasService } from './cervejas.service';
 
 @Component({
   selector: 'app-litsagem',
-  templateUrl: './litsagem.component.html',
-  styleUrls: ['./litsagem.component.css']
+  templateUrl: './listagem.component.html',
+  styleUrls: ['./listagem.component.css']
 })
-export class LitsagemComponent implements OnInit {
+export class ListagemComponent implements OnInit {
 
   cerveja: Cervejas[] = []
   constructor(private service: CervejasService) { }

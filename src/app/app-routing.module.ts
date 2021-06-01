@@ -1,3 +1,4 @@
+import { LitsagemComponent } from './pages/litsagem/listagem.component';
 
 
 import { NgModule,} from '@angular/core';
@@ -5,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login/login.component';
 
 import { DetalhesComponent } from './pages/detalhes/detalhes.component';
-import { LitsagemComponent } from './pages/litsagem/litsagem.component';
+import { ListagemComponent } from './pages/listagem/listagem.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { ListagemHorizontalComponent } from './pages/listagem-horizontal/listagem-horizontal.component';
 
@@ -16,7 +17,7 @@ import { ListagemHorizontalComponent } from './pages/listagem-horizontal/listage
 
 
 const routes: Routes = [{path: 'login-component', component: LoginComponent },
-{path: 'listagem-component', component: LitsagemComponent},
+{path: 'listagem-component', component: ListagemComponent},
 {path: 'detalhes-component', component: DetalhesComponent},
 {path: 'listagem-horizontal', component: ListagemHorizontalComponent},
 
