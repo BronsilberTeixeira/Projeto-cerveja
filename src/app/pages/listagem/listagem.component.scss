@@ -93,18 +93,24 @@ body{
   height: 45px;
   margin-bottom: 30px;
   margin: 0 auto;
-  border-color: #F5930A;
   color: #F5930A;
   background-color: #191919;
 }
 #barraPesquisa{
-  margin: 0 auto;
+  margin-top: 10px;
   margin-bottom: 30px;
   background-color: #191919;
   color: #F5930A;
   border-color: #F5930A;
-  width: 500px;
-  height: 45px;
+  width: 400px;
+  height: 35px;
+}
+
+.iconeSearch{
+  height: 35px;
+  margin-top: 10px;
+  border-color:#F5930A ;
+  color: #F5930A;
 }
 
 #texto-switch{
