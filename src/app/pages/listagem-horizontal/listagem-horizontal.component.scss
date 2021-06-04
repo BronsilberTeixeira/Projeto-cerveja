@@ -97,6 +97,7 @@ body{
 }
 
 
+
 .imagem {
   width: 60px;
   height: 150px;
@@ -127,8 +128,8 @@ body{
   }
 
   .card-horizontal{
-   border-radius: 2px;
-   border-color: #F5930A;
+    appearance: outline;
+    outline: #F5930A;
     margin-bottom: 50px;
     margin-left: 60px;
   }

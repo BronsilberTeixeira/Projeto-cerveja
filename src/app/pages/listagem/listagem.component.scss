@@ -15,12 +15,12 @@ body{
 }
 
 .container{
-  margin-right: 30px;
+  margin-left: 10%;
 }
 
 .card-cerv{
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   background-color:#191919 ;
   border-color: #F5930A;
   width: 250px;
@@ -67,12 +67,10 @@ body{
 
 .card-troca{
   background-color:#191919 ;
-  text-align: center;
   color: #F5930A;
   font-size: 10px;
   width: 160px;
   height: 70px;
-  margin-bottom: 90px;
   margin-left: 100px;
   border-color: #191919;
 }
@@ -89,11 +87,12 @@ body{
 }
 
 
-#pesquisar{
-  height: 45px;
-  margin-bottom: 30px;
-  margin: 0 auto;
+.pesquisar{
+  height: 35px;
+  margin-top: 10px;
   color: #F5930A;
+  border-color: #f5930A;
+  border-radius: 2px;
   background-color: #191919;
 }
 #barraPesquisa{

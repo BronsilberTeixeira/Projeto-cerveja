@@ -39,7 +39,7 @@ import { FormsModule } from '@angular/forms';
     routing,
     FormsModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

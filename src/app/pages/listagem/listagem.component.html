@@ -18,7 +18,11 @@
 
         type="search"
         placeholder="Busque por sua cerveja favorita"
-        aria-label="Search"><span class="iconeSearch btn  btn-outline-warning material-icons">search</span>
+        aria-label="Search">
+
+        <button mat-icon-button color="primary" class="pesquisar">
+          <mat-icon>search</mat-icon>
+        </button>
 
   </form>
 
@@ -26,8 +30,12 @@
     <div class="card  text-center card-troca col-4">
       Selecione o tipo de exibição
       <div class="d-flex icons-juntos">
-        <a class="desativado btn btn-warning btn-troca"><span class="material-icons">view_column</span></a>
-        <a  routerLink="/listagemhorizontal" class="btn-troca btn btn-warning "><span class="material-icons">view_list</span></a>
+        <a class="desativado btn btn-warning btn-troca"><span class="material-icons-outlined">
+          view_week
+          </span></a>
+        <a  routerLink="/listagemhorizontal" class="btn-troca btn btn-warning "><span class="material-icons-outlined">
+          view_list
+          </span></a>
       </div>
     </div>
   </div>
