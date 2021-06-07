@@ -4,38 +4,48 @@
 
   <app-cabecalho></app-cabecalho>
 
-<div class="container mt-5">
-  <div class="row">
+  <div class="container mt-5">
+    <div class="row">
 
-    <div class="col-2">
-      <h2 id="cervejas">Nossas cervejas</h2>
-    </div>
+      <div class="col-2">
+        <h2 id="cervejas">Nossas cervejas</h2>
+      </div>
 
     <form class="pesquisa d-flex col-6">
 
-      <input id="barraPesquisa"
-        class="form-control me-2 mw-175px"
+        <input id="barraPesquisa"
+          class="form-control"
 
-        type="search"
-        placeholder="Busque por sua cerveja favorita"
-        aria-label="Search"><span class="iconeSearch btn  btn-outline-warning material-icons">search</span>
+          type="search"
+          placeholder="Busque por sua cerveja favorita"
+          aria-label="Search">
 
-  </form>
+          <button mat-icon-button color="primary" class="pesquisar">
+            <mat-icon>search</mat-icon>
+          </button>
+
+    </form>
 
 
-      <div class="card  text-center card-troca col-4">
-        Selecione o tipo de exibição
-        <div class="d-flex icons-juntos">
-          <a  routerLink="/listagem" class=" btn btn-warning btn-troca"><span class="material-icons-outlined">
-            view_week
-            </span></a>
-          <a  class="desativado btn-troca btn btn-warning "><span class="material-icons-outlined">
-            view_list
-            </span></a>
-        </div>
-      </div>
-
+  <div class="card  card-troca col-4">
+    Selecione o tipo de exibição
+    <div class="d-flex">
+      <button routerLink="/listagem"
+      class="btn-troca"
+      mat-raised-button
+      matTooltip="Resumido"
+      ><span class="material-icons-outlined">
+        view_week
+        </span></button>
+      <button class="desativado btn-troca"
+        mat-raised-button
+        matTooltip="Detalhado">
+        <span class="material-icons-outlined">
+        view_list
+        </span></button>
+    </div>
   </div>
+</div>
 
 
 

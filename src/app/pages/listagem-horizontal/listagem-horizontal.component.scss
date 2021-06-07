@@ -39,12 +39,14 @@ body{
 
 
 .btn-troca{
-  margin: auto;
   background-color:#191919 ;
   border-color: #F5930A;
   color: #F5930A;
-  margin-left: 20px;
-  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  margin-top: 8px;
   width: 40px;
   height: 40px;
 }
@@ -52,16 +54,17 @@ body{
 
 .card-troca{
   background-color:#191919 ;
-  text-align: center;
   color: #F5930A;
-  font-size: 10px;
-  width: 160px;
+  font-size: 15px;
+  width: 220px;
   height: 70px;
-  margin-bottom: 90px;
   margin-left: 100px;
   border-color: #191919;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 #cervejas{
   color: #F5930A;
   margin-top: 10px;
@@ -72,19 +75,29 @@ body{
 }
 
 
-#pesquisar{
-  height: 45px;
-  margin-bottom: 30px;
-  margin: 0 auto;
-  color: #F5930A;
-  background-color: #191919;
+.pesquisar{
+  height: 35px;
+  margin-top: 10px;
+  color: #191919;
+  background-color: #F5930A;
+  border-left-color:#191919 ;
+  border-left: 0px;
+  border-right-color: #F5930A;
+  border-top-color: #F5930A;
+  border-bottom-color: #F5930A;
 }
+
 #barraPesquisa{
   margin-top: 10px;
   margin-bottom: 30px;
   background-color: #191919;
   color: #F5930A;
-  border-color: #F5930A;
+   border-radius: 3px;
+  border-right-color:#191919 ;
+  border-right: 0px;
+  border-left-color: #F5930A;
+  border-top-color: #F5930A;
+  border-bottom-color: #F5930A;
   width: 400px;
   height: 35px;
 }
@@ -130,6 +143,7 @@ body{
   .card-horizontal{
     appearance: outline;
     outline: #F5930A;
+    margin-top: 60px;
     margin-bottom: 50px;
     margin-left: 60px;
   }

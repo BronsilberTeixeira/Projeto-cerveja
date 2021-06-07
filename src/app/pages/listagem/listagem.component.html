@@ -14,28 +14,35 @@
   <form class="pesquisa d-flex col-6">
 
       <input id="barraPesquisa"
-        class="form-control me-2 mw-175px"
-
+        class="form-control"
+        [formControl] ="queryField"
         type="search"
         placeholder="Busque por sua cerveja favorita"
         aria-label="Search">
 
-        <button mat-icon-button color="primary" class="pesquisar">
+        <button mat-icon-button color="primary" class="pesquisar"
+        (click)="onSearch()">
           <mat-icon>search</mat-icon>
         </button>
 
   </form>
 
 
-    <div class="card  text-center card-troca col-4">
+    <div class="card  card-troca col-4">
       Selecione o tipo de exibição
-      <div class="d-flex icons-juntos">
-        <a class="desativado btn btn-warning btn-troca"><span class="material-icons-outlined">
+      <div class="d-flex">
+        <button class="desativado btn-troca"
+        mat-raised-button
+        matTooltip="Resumido"
+        ><span class="material-icons-outlined">
           view_week
-          </span></a>
-        <a  routerLink="/listagemhorizontal" class="btn-troca btn btn-warning "><span class="material-icons-outlined">
+          </span></button>
+        <button routerLink="/listagemhorizontal" class="btn-troca"
+          mat-raised-button
+          matTooltip="Detalhado">
+          <span class="material-icons-outlined">
           view_list
-          </span></a>
+          </span></button>
       </div>
     </div>
   </div>

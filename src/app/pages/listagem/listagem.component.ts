@@ -15,7 +15,7 @@ import { Cervejas } from '../../shared/models/Cervejas';
   selector: 'app-listagem',
   templateUrl: './listagem.component.html',
   styleUrls: ['./listagem.component.scss'],
-  preserveWhitespaces: true
+  preserveWhitespaces: true,
 })
 
 
@@ -23,17 +23,17 @@ import { Cervejas } from '../../shared/models/Cervejas';
 export class ListagemComponent implements OnInit {
 
 
+  queryField = new FormControl();
+  readonly SEARCH_URL = 'https://api.punkapi.com/v2/beers';
   cervejas: Cervejas[] = []
 
   constructor(private service: CervejasService,
     private http: HttpClient) { }
 
-  queryField = new FormControl();
-
-
 
 ngOnInit(){
-  return this.listagem();
+   this.listagem();
+   this.onSearch();
 }
 
 listagem(){
@@ -42,13 +42,12 @@ listagem(){
 }
 
 onSearch(){
+ console.log(this.queryField.value );
 
-
-document.getElementById('pesquisar')?.addEventListener("keyup", function () {
-var busca: any = document.getElementById("pesquisar")?.nodeValue?.toLowerCase();
-
-})
 }
+
+
+
 
 
 
