@@ -1,5 +1,5 @@
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, pipe } from 'rxjs';
@@ -21,14 +21,13 @@ import { Cervejas } from '../../shared/models/Cervejas';
 
 
 export class ListagemComponent implements OnInit {
-
-
+  readonly SEARCH_API = 'https://api.punkapi.com/v2/beers'
   queryField = new FormControl();
-  readonly SEARCH_URL = 'https://api.punkapi.com/v2/beers';
+
   cervejas: Cervejas[] = []
 
   constructor(private service: CervejasService,
-    private http: HttpClient) { }
+    private http: HttpClient) {}
 
 
 ngOnInit(){
@@ -37,14 +36,17 @@ ngOnInit(){
 }
 
 listagem(){
-  this.service.list()
+   this.service.list()
   .subscribe((dados:any) => this.cervejas = dados);
 }
 
-onSearch(){
- console.log(this.queryField.value );
+onSearch(): void{
 
 }
+
+
+
+
 
 
 
