@@ -17,9 +17,11 @@ readonly API = 'https://api.punkapi.com/v2/beers';
 constructor(private http:HttpClient) { }
 
 list(){
-return this.http.get<Cervejas[]>(this.API)
+  return this.http.get<Cervejas[]>(this.API);
 }
 
-
+pesquisaCerveja(filtro:string){
+  return this.http.get<Cervejas[]>(`${this.API}?beer_name=${filtro}`);
+}
 
 }
