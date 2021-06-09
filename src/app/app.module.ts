@@ -39,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     routing,
     FormsModule,
+    ReactiveFormsModule,
     MatInputModule,
     MatIconModule,
     MatTooltipModule,

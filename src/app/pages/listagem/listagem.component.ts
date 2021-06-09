@@ -8,6 +8,8 @@ import { of } from 'rxjs';
 
 import { CervejasService } from 'src/app/shared/models/cervejas.service';
 import { Cervejas } from '../../shared/models/Cervejas';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 
 
@@ -23,19 +25,15 @@ import { Cervejas } from '../../shared/models/Cervejas';
 
 export class ListagemComponent implements OnInit {
   queryField = new FormControl();
-
-
-  private filtroNome = new Subject<string>();
-
   cervejas: Cervejas[] = []
 
   constructor(private service: CervejasService,
-    private http: HttpClient) {}
+    private http: HttpClient,
+    private _snackBar: MatSnackBar) {}
 
 
 ngOnInit(){
    this.listagem();
-
 }
 
 listagem(){
@@ -44,20 +42,14 @@ listagem(){
 }
 
 pesquisaCerveja(){
+  if(this.queryField.value === '' || this.queryField.value === null){
+    this.abrirSnackbar()
+  };
+    this.service.pesquisaCerveja(this.queryField.value)
+    .subscribe((dados)=> this.cervejas = dados );
+  }
 
-  if(this.queryField.value === ''){
-    console.log('campo vazio');
-  }else if(){};
-
-  this.queryField = dado.pipe(
-    debounceTime(200),
-    distinctUntilChanged
-  )
-  ;
-
-  this.service.pesquisaCerveja(this.queryField.value)
-  .subscribe((dados)=> this.cervejas = dados )
-
-
+abrirSnackbar(){
+  this._snackBar.open('Coloque uma cerveja', 'sair')
 }
 }
