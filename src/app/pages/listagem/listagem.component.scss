@@ -17,6 +17,7 @@ body{
   margin-left: 10%;
 }
 
+.resumido{
 .card-cerv{
   text-align: center;
   margin-top: 30px;
@@ -28,7 +29,6 @@ body{
   margin: 50px;
   align-items: center;
 }
-
 
 
 .btn-card{
@@ -43,6 +43,7 @@ body{
   align-self: flex-end;
   text-align: center;
 
+}
 }
 
 .desativado{
@@ -132,5 +133,53 @@ font-size: small;
 text-align: center;
 }
 
+.detalhado{
 
+.imagem {
+  width: 60px;
+  height: 150px;
+}
 
+  .innerLeft {
+    display:inline-block;
+    margin-right:-4px;
+    vertical-align:top;
+    width:80px;
+    text-align:center;
+    padding:5px;
+  }
+  .innerRight {
+    margin-left: 25px;
+    color: #F5930A;
+    display:inline-block;
+    vertical-align:top;
+    width:70%;
+    text-align:left;
+    padding:5px;
+  }
+  .card-text {
+    display:inline-block;
+    background-color: #191919;
+    color: #F5930A;
+    margin-left: 10px;
+  }
+
+  .card-horizontal{
+    appearance: outline;
+    outline: #F5930A;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    margin-left: 60px;
+  }
+  .btn-card{
+    background-color:#191919 ;
+    border-color: #F5930A;
+    color: #F5930A;
+  }
+
+  .div-btn{
+    text-align: right;
+    margin-top: 10%;
+  }
+
+}

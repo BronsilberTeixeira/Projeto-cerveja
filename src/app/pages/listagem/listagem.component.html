@@ -32,13 +32,18 @@
     <div class="card  card-troca col-4">
       Selecione o tipo de exibição
       <div class="d-flex">
-        <button class="desativado btn-troca"
+        <button class="btn-troca"
+        [ngClass]="{'desativado':troca === true}"
+        (click)="trocaCard()"
         mat-raised-button
         matTooltip="Resumido"
         ><span class="material-icons-outlined">
           view_week
           </span></button>
-        <button routerLink="/listagemhorizontal" class="btn-troca"
+
+        <button  class="btn-troca"
+          [ngClass]="{'desativado':troca === false, 'detalhado': troca === false}"
+          (click)="trocaCard()"
           mat-raised-button
           matTooltip="Detalhado">
           <span class="material-icons-outlined">
@@ -49,7 +54,7 @@
   </div>
 
 
-<div class="row">
+<div class="row resumido">
   <div class="card  card-cerv" *ngFor="let cervs of cervejas"  >
     <img class="imgCard" src="{{ cervs.image_url }}">
     <div class="card-body">
@@ -62,6 +67,34 @@
     </div>
   </div>
   </div>
+
+
+  <div class="card-horizontal" *ngFor="let cervs of cervejas">
+
+    <div class="row detalhado" >
+          <div class="innerLeft">
+            <img class="imagem" src="{{ cervs.image_url }}">
+          </div>
+          <div class="innerRight">
+            <div class="horizontal-card-footer">
+              <h4 class="card-title">{{ cervs.name }}</h4>
+              <span class="card-text">{{cervs.description}}</span>
+      </div>
+
+      <div class="row">
+        <div class="div-btn">
+          <a routerLink="/detalhes"
+           class="btn  btn-outline-warning btn-card">Veja mais</a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+
+  </div>
+
 </div>
 
 
