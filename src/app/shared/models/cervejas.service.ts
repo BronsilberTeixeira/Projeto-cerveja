@@ -22,8 +22,7 @@ list(){
 
 pesquisaCerveja(filtro:string){
   return this.http.get<Cervejas[]>(`${this.API}?beer_name=${filtro}`)
-
-
 }
+
 
 }

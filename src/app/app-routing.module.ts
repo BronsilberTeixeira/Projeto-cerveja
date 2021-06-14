@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login/login.component';
 import { DetalhesComponent } from './pages/detalhes/detalhes.component';
 import { ListagemComponent } from './pages/listagem/listagem.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
-import { ListagemHorizontalComponent } from './pages/listagem-horizontal/listagem-horizontal.component';
 
 
 
@@ -18,7 +17,6 @@ import { ListagemHorizontalComponent } from './pages/listagem-horizontal/listage
 const routes: Routes = [{path: 'login-component', component: LoginComponent },
 {path: 'listagem', component: ListagemComponent},
 {path: 'detalhes', component: DetalhesComponent},
-{path: 'listagemhorizontal', component: ListagemHorizontalComponent},
 {path: '', component:LoginComponent},
 
 //{path: '', redirectTo: 'login-component', pathMatch: 'full'}, //redireciona para a pagina de login

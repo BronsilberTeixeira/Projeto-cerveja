@@ -1,4 +1,5 @@
 
+
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
@@ -7,9 +8,8 @@ import {distinctUntilChanged, debounceTime,  switchMap, elementAt,} from 'rxjs/o
 import { of } from 'rxjs';
 
 import { CervejasService } from 'src/app/shared/models/cervejas.service';
-import { Cervejas } from '../../shared/models/Cervejas';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { Cervejas } from './../../shared/models/Cervejas';
 
 
 
@@ -48,21 +48,25 @@ pesquisaCerveja(){
     this.abrirSnackbar()
   };
 
-  const found = this.cervejas.find((element:any) => this.cervejas = element);
-
-  console.log(found);
-
+  /*let valor = this.service.includes(this.queryField.value)
+  console.log(valor)*/
     this.service.pesquisaCerveja(this.queryField.value)
     .subscribe((dados)=> this.cervejas = dados );
-
-
   }
 
 abrirSnackbar(){
-  this._snackBar.open('Coloque uma cerveja', 'sair', { duration: 2000, panelClass: ['hotpink'] })
+  this._snackBar.open('Coloque uma cerveja', 'sair', { duration: 2000, panelClass: ['hotpink'] });
 }
 
 trocaCard(){
-  this.troca = !this.troca
+  this.troca = !this.troca;
 }
+
+invisivel(){
+  var disp =document.getElementById('exibicao')?.style.display
+  disp = 'block'
+}
+
+
+
 }

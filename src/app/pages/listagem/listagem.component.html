@@ -22,7 +22,7 @@
         >
 
         <button mat-icon-button color="primary" class="pesquisar"
-        (click)="pesquisaCerveja()">
+          (click)="pesquisaCerveja()">
           <mat-icon>search</mat-icon>
         </button>
 
@@ -54,7 +54,8 @@
   </div>
 
 
-<div class="row resumido">
+<div  [ngClass]="{'invisivel': troca === true}"
+class="row resumido">
   <div class="card  card-cerv" *ngFor="let cervs of cervejas"  >
     <img class="imgCard" src="{{ cervs.image_url }}">
     <div class="card-body">
@@ -69,7 +70,9 @@
   </div>
 
 
-  <div class="card-horizontal" *ngFor="let cervs of cervejas">
+  <div class="card-horizontal"
+   *ngFor="let cervs of cervejas"
+   [ngClass]="{'invisivel': troca === false}" >
 
     <div class="row detalhado" >
           <div class="innerLeft">

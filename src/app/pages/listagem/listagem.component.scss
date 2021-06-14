@@ -17,7 +17,7 @@ body{
   margin-left: 10%;
 }
 
-.resumido{
+
 .card-cerv{
   text-align: center;
   margin-top: 30px;
@@ -44,7 +44,7 @@ body{
   text-align: center;
 
 }
-}
+
 
 .desativado{
   opacity: 0.3;
@@ -127,13 +127,18 @@ body{
   border-color:#F5930A ;
   color: #F5930A;
 }
+.invisivel{
+  height: 0px;
+	overflow: hidden;
+	transition: height 0.8s;
+}
 
 #texto-switch{
 font-size: small;
 text-align: center;
 }
 
-.detalhado{
+
 
 .imagem {
   width: 60px;
@@ -182,4 +187,4 @@ text-align: center;
     margin-top: 10%;
   }
 
-}
+
