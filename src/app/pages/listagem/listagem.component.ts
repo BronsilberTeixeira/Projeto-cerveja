@@ -48,10 +48,16 @@ pesquisaCerveja(){
     this.abrirSnackbar()
   };
 
+ if(this.cervejas.length ){
+  this.abrirSnackbar()
+ };
+
   /*let valor = this.service.includes(this.queryField.value)
   console.log(valor)*/
     this.service.pesquisaCerveja(this.queryField.value)
     .subscribe((dados)=> this.cervejas = dados );
+
+
   }
 
 abrirSnackbar(){
@@ -66,7 +72,5 @@ invisivel(){
   var disp =document.getElementById('exibicao')?.style.display
   disp = 'block'
 }
-
-
 
 }
