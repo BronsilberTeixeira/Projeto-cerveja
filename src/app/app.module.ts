@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login/login.component';
 import { ListagemComponent } from './pages/listagem/listagem.component';
 import { DetalhesComponent } from './pages/detalhes/detalhes.component';
-import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -26,7 +25,6 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     ListagemComponent,
     DetalhesComponent,
-    PaginaNaoEncontradaComponent,
     CabecalhoComponent
    ],
   imports: [

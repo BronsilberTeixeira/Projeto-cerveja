@@ -6,7 +6,6 @@ import { LoginComponent } from './login/login/login.component';
 
 import { DetalhesComponent } from './pages/detalhes/detalhes.component';
 import { ListagemComponent } from './pages/listagem/listagem.component';
-import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 
 
 
@@ -16,12 +15,12 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao
 
 const routes: Routes = [{path: 'login-component', component: LoginComponent },
 {path: 'listagem', component: ListagemComponent},
-{path: 'detalhes', component: DetalhesComponent},
+{path: 'detalhes/:id', component: DetalhesComponent},
 {path: '', component:LoginComponent},
 
 //{path: '', redirectTo: 'login-component', pathMatch: 'full'}, //redireciona para a pagina de login
 
-{ path: '**', component: PaginaNaoEncontradaComponent }
+{ path: '**', component:ListagemComponent }
 ];
 
 export const routing: ModuleWithProviders<any> = RouterModule.forRoot(routes);

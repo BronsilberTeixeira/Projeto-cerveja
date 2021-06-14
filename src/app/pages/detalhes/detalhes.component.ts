@@ -8,9 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetalhesComponent implements OnInit {
 
-  idAtual: any;
 
-  constructor(private route: ActivatedRoute) { }
+
+  constructor(private route: ActivatedRoute) {
+    console.log(this.route);
+  }
 
 
 
@@ -19,11 +21,7 @@ export class DetalhesComponent implements OnInit {
   }
 
   chamarId(){
-  this.route.params.subscribe((objeto:any) =>{
-  this.idAtual = objeto.id;
 
-  this.idAtual = objeto['id'];
-  })
   }
 
 }
