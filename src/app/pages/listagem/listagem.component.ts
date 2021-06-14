@@ -68,9 +68,5 @@ trocaCard(){
   this.troca = !this.troca;
 }
 
-invisivel(){
-  var disp =document.getElementById('exibicao')?.style.display
-  disp = 'block'
-}
 
 }
