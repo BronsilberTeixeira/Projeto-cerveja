@@ -1,0 +1,45 @@
+
+.div-login{
+  background-color: #191919;
+  width: 370px;
+  height: 420px;
+  margin-top: 90px;
+  margin-left: 70px;
+  text-align: center;
+}
+
+.img-vaider{
+  width: 200px;
+  height: 190px;
+  margin-top: 10%;
+}
+
+.bi{
+  margin-right: 8px;
+}
+
+.btn-login{
+  background-color: #EEEEEE;
+  color: #191919;
+  margin-top: 18%;
+}
+
+.titulo{
+  margin-top: 5%;
+  color: #EEEEEE;
+  font-size: 18px;
+}
+
+html, body{ height: 100%; margin: 0px;}
+
+.bg{
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+
+  /* Half height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
