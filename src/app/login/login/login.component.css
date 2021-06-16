@@ -1,8 +1,35 @@
 
 .div-login{
-  background-color: #19191919;
+  background-color: #F5930A;
   width: 370px;
-  height: 400px;
-  margin-top: 70px;
+  height: 420px;
+  margin-top: 90px;
   margin-left: 70px;
+  text-align: center;
+}
+
+.img-vaider{
+  width: 180px;
+  height: 190px;
+  margin-top: 10%;
+}
+
+.bi{
+  margin-right: 8px;
+}
+
+.btn-login{
+  background-color: #EEEEEE;
+  color: #191919;
+  margin-top: 18%;
+}
+
+.titulo{
+  margin-top: 5%;
+  color: #EEEEEE;
+  font-size: 18px;
+}
+
+.div-bg{
+  background-color: #F5930A;
 }

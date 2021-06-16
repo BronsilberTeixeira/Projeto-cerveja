@@ -13,7 +13,7 @@ import { ListagemComponent } from './pages/listagem/listagem.component';
 
 
 
-const routes: Routes = [{path: 'login-component', component: LoginComponent },
+const routes: Routes = [{path: 'login', component: LoginComponent },
 {path: 'listagem', component: ListagemComponent},
 {path: 'detalhes/:id', component: DetalhesComponent},
 {path: '', component:LoginComponent},

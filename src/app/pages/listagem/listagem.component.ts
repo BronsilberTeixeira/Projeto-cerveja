@@ -49,7 +49,8 @@ pesquisaCerveja(){
   };
 
  if(this.cervejas.length ){
-  this.abrirSnackbar()
+  this._snackBar.open('Cerveja não existe', 'sair', { duration: 2000, panelClass: ['my-snack-bar'] });
+  window.location.reload();
  };
 
   /*let valor = this.service.includes(this.queryField.value)
@@ -61,7 +62,8 @@ pesquisaCerveja(){
   }
 
 abrirSnackbar(){
-  this._snackBar.open('Coloque uma cerveja', 'sair', { duration: 2000, panelClass: ['hotpink'] });
+  this._snackBar.open('Coloque uma cerveja', 'sair', { duration: 2000, panelClass: ['my-snack-bar'] });
+  window.location.reload();
 }
 
 trocaCard(){
