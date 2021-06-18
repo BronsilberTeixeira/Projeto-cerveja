@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
+
+
 @Component({
   selector: 'app-detalhes',
   templateUrl: './detalhes.component.html',
@@ -16,26 +18,28 @@ export class DetalhesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     private service: CervejasService,
-    private inscricao:Subscription) {}
+    private inscricao: Subscription) {
+
+    }
 
 
 
   ngOnInit(): void {
-    return this.chamarId();
-  }
 
-  chamarId(){
-    this.inscricao = this.route.params.subscribe(
-      (params:any)=> {
-        this.id = params['id'];
+    this.inscricao =this.route.params.subscribe(
+      (params:any) =>{
+        this.id = params['id']
 
-      this.cervejas = this.service.list()
+        this.cervejas = this.service.detalhesCerv(this.id)
       }
-    )
+    );
   }
-ngOnDestroy(): void {
-  //Called once, before the instance is destroyed.
-  //Add 'implements OnDestroy' to the class.
-  this.inscricao.unsubscribe;
-}
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.inscricao.unsubscribe;
+  }
+
+
 }

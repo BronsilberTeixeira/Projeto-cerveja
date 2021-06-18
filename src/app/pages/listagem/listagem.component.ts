@@ -52,13 +52,8 @@ pesquisaCerveja(){
   this._snackBar.open('Cerveja não existe', 'sair', { duration: 2000, panelClass: ['my-snack-bar'] });
   window.location.reload();
  };
-
-  /*let valor = this.service.includes(this.queryField.value)
-  console.log(valor)*/
     this.service.pesquisaCerveja(this.queryField.value)
     .subscribe((dados)=> this.cervejas = dados );
-
-
   }
 
 abrirSnackbar(){

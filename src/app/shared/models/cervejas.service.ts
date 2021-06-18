@@ -1,4 +1,4 @@
-import { Observable, pipe } from 'rxjs';
+import { Observable, of, pipe } from 'rxjs';
 import { tap, map, filter, distinctUntilChanged, debounceTime,  switchMap, catchError} from 'rxjs/operators' ;
 import { Cervejas } from './Cervejas';
 import { HttpClient } from '@angular/common/http';
@@ -24,4 +24,10 @@ pesquisaCerveja(filtro:string){
   return this.http.get<Cervejas[]>(`${this.API}?beer_name=${filtro}`)
 }
 
+detalhesCerv(id:any){
+
 }
+
+}
+
+
