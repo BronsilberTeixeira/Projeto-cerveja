@@ -21,15 +21,26 @@
 .titulo{
   margin-top: 5%;
   color: #EEEEEE;
+  opacity: 3;
   font-size: 18px;
 }
 
 .btn-google{
-background-color: white;
+background-color: #E4E4E4;
+opacity: 4;
 color: #191919;
 margin-bottom: 5px;
+width: 215px;
 }
 
+.btn-face{
+  background-color: #3b5998;
+  color: #EEEEEE;
+}
+
+.icon-face{
+  margin-right: 4px;
+}
 
 html, body{ height: 100%; margin: 0px;}
 
