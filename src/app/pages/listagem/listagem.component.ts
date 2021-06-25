@@ -45,25 +45,25 @@ listagem(){
 
 pesquisaCerveja(){
   if(this.queryField.value === '' || this.queryField.value === null){
-    this.abrirSnackbar()
+    this.abrirSnackbar();
   };
 
- if(this.cervejas.length ){
-  this._snackBar.open('Cerveja não existe', 'sair', { duration: 2000, panelClass: ['my-snack-bar'] });
-  window.location.reload();
+ if(this.cervejas.length === 0 ){
+  this.abrirSnackbar();
  };
     this.service.pesquisaCerveja(this.queryField.value)
     .subscribe((dados)=> this.cervejas = dados );
   }
 
 abrirSnackbar(){
-  this._snackBar.open('Coloque uma cerveja', 'sair', { duration: 2000, panelClass: ['my-snack-bar'] });
+  this._snackBar.open('Coloque uma cerveja valida', 'sair', { duration: 2000, panelClass: ['my-snack-bar'] });
   window.location.reload();
 }
 
 trocaCard(){
   this.troca = !this.troca;
 }
+
 
 
 }

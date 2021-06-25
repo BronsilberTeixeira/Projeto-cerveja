@@ -1,3 +1,4 @@
+import { AppComponent } from './app.component';
 
 
 import { ModuleWithProviders, NgModule,} from '@angular/core';
@@ -16,7 +17,7 @@ import { ListagemComponent } from './pages/listagem/listagem.component';
 const routes: Routes = [{path: 'login', component: LoginComponent },
 {path: 'listagem', component: ListagemComponent},
 {path: 'detalhes/:id', component: DetalhesComponent},
-{path: '', component:LoginComponent},
+{path: '', component: LoginComponent},
 
 //{path: '', redirectTo: 'login-component', pathMatch: 'full'}, //redireciona para a pagina de login
 

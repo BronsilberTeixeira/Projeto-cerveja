@@ -1,7 +1,9 @@
+import { Cervejas } from './../../shared/models/Cervejas';
 import { CervejasService } from 'src/app/shared/models/cervejas.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { any } from 'bluebird';
+
 
 
 
@@ -13,33 +15,31 @@ import { Subscription } from 'rxjs';
 export class DetalhesComponent implements OnInit {
 
   id: any;
-  cervejas:any;
-
+  cervejas:Cervejas[] = [];
+  cerv:any;
 
   constructor(private route: ActivatedRoute,
-    private service: CervejasService,
-    private inscricao: Subscription) {
-
+    private service: CervejasService) {
     }
 
 
 
   ngOnInit(): void {
 
-    this.inscricao =this.route.params.subscribe(
-      (params:any) =>{
-        this.id = params['id']
+    this.id = this.route.snapshot.params['id'];
+    let cerveja_id = this.id
 
-        this.cervejas = this.service.detalhesCerv(this.id)
-      }
-    );
+    this.service.detalhesCerveja(cerveja_id )
+    .subscribe((dados)=> this.cervejas = dados);
+
+    console.log(this.cervejas);
+
+
+
   }
 
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-    this.inscricao.unsubscribe;
-  }
+
+
 
 
 }

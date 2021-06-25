@@ -23,10 +23,10 @@ list(){
 pesquisaCerveja(filtro:string){
   return this.http.get<Cervejas[]>(`${this.API}?beer_name=${filtro}`)
 }
-
-detalhesCerv(id:any){
-
+detalhesCerveja(id:string){
+  return this.http.get<Cervejas[]>(`${this.API}?ids=${id}`)
 }
+
 
 }
 

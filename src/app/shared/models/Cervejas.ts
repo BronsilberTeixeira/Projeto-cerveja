@@ -6,5 +6,6 @@ export interface Cervejas{
   abv: string
   ibu: string
   temp: number
+  ebc:number
   image_url: string
 }
