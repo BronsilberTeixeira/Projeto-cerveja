@@ -21,6 +21,7 @@ import { DetalhesComponent } from './pages/detalhes/detalhes.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatTooltipModule,
     SocialLoginModule,
+    MatButtonModule,
     MatSnackBarModule
   ],
   providers: [CervejasService,
