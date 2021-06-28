@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
+
 
 
 }

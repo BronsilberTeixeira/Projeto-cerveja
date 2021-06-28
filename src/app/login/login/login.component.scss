@@ -3,6 +3,7 @@
   background-color: #191919;
   width: 370px;
   height: 420px;
+  margin-left: 10px;
   margin-top: 90px;
   margin-left: 70px;
   text-align: center;
@@ -44,11 +45,12 @@ width: 215px;
 
 html, body{ height: 100%; margin: 0px;}
 
-.bg{
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+html,body{
+  background-image: url("https://i.postimg.cc/pVnpqXrB/vaider-bg.jpg");
 
   /* Half height */
   height: 100%;
+  width:100%;
 
   /* Center and scale the image nicely */
   background-position: center;
