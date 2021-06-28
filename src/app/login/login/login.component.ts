@@ -1,14 +1,23 @@
+import { map } from 'rxjs/operators';
+
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthService, SocialUser } from 'angularx-social-login';
+import { SocialloginService } from 'src/app/shared/models/sociallogin.service';
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private authService: SocialAuthService) { }
+  users:SocialUser[]=[];
+  logins:any;
+  Users:any;
+
+  constructor( private authService: SocialAuthService,
+    private router: Router,
+    private login:SocialloginService ) { }
 
   ngOnInit(): void {
   }
@@ -18,8 +27,17 @@ export class LoginComponent implements OnInit {
   }
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+    console.log(this.authService);
+
   }
+  onSignIn()
+  {
+    this.Users = this.authService.signIn;
 
+    if(this.Users.signIn === true){
+      this.router.navigate([`/listagem`])
+    }
 
+  }
 
 }

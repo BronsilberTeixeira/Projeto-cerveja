@@ -2,7 +2,6 @@ import { Cervejas } from './../../shared/models/Cervejas';
 import { CervejasService } from 'src/app/shared/models/cervejas.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { any } from 'bluebird';
 
 
 

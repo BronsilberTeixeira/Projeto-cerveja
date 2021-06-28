@@ -13,16 +13,18 @@
 
   <form class="pesquisa d-flex col-6">
 
-      <input id="barraPesquisa"
+      <input class="barraPesquisa"
         [formControl] ="queryField"
         type="search"
         placeholder="Busque por sua cerveja favorita"
         aria-label="Search"
         >
 
-        <button mat-icon-button color="primary" class="pesquisar"
-          (click)="pesquisaCerveja()">
-          <mat-icon>search</mat-icon>
+      <button class="btn btn-outline-warning pesquisar">
+        <span class="material-icons-outlined"
+        (click)="pesquisaCerveja()">
+          search
+          </span>
         </button>
 
   </form>
@@ -32,7 +34,7 @@
       Selecione o tipo de exibição
       <div class="d-flex">
         <button class="btn-troca"
-        [ngClass]="{'desativado':troca === true}"
+        [ngClass]="{'desativado':troca === false}"
         (click)="trocaCard()"
         mat-raised-button
         matTooltip="Resumido"
@@ -41,7 +43,7 @@
           </span></button>
 
         <button  class="btn-troca"
-          [ngClass]="{'desativado':troca === false, 'detalhado': troca === false}"
+          [ngClass]="{'desativado':troca === true, 'detalhado': troca === true}"
           (click)="trocaCard()"
           mat-raised-button
           matTooltip="Detalhado">

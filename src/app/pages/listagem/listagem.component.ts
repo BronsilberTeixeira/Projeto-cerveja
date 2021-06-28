@@ -44,11 +44,11 @@ listagem(){
 }
 
 pesquisaCerveja(){
-  if(this.queryField.value === '' || this.queryField.value === null){
+  if(this.queryField.value == '' || this.queryField.value === null){
     this.abrirSnackbar();
   };
 
- if(this.cervejas.length === 0 ){
+ if(this.cervejas.length.valueOf() === 0 ){
   this.abrirSnackbar();
  };
     this.service.pesquisaCerveja(this.queryField.value)
