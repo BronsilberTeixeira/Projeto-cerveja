@@ -10,13 +10,14 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  users:SocialUser[]=[];
+  response:any;
+  socialusers= new SocialUser();
   logins:any;
   Users:any;
 
   constructor( private authService: SocialAuthService,
     private router: Router,
+    public OAuth:SocialAuthService,
     private login:SocialloginService ) { }
 
   ngOnInit(): void {
@@ -25,19 +26,35 @@ export class LoginComponent implements OnInit {
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
-  signInWithGoogle(): void {
-    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-    console.log(this.authService);
 
-  }
-  onSignIn()
-  {
-    this.Users = this.authService.signIn;
+  signInWithGoogle(socialProvider:string) {
+    let socialPlatformProvider:any ;
 
-    if(this.Users.signIn === true){
-      this.router.navigate([`/listagem`])
+    if (socialProvider === 'google') {
+      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
     }
 
+
+
+    this.OAuth.signIn(socialPlatformProvider).then(socialusers => {
+      console.log(socialProvider, socialusers);
+      console.log(socialusers);
+      this.Savesresponse(socialusers);
+
+    });
+
   }
 
+
+  Savesresponse( users:SocialUser) {
+
+    this.login.Savesresponse(users).subscribe((res: any) => {
+      console.log(res);
+      this.Users=res;
+      this.response = res.userDetail;
+      localStorage.setItem('users', JSON.stringify(users));
+      console.log(localStorage.setItem('socialusers', JSON.stringify(users)));
+      this.router.navigate([`/listagem`]);
+    });
+  }
 }
