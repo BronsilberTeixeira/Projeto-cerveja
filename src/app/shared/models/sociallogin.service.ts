@@ -9,7 +9,7 @@ url:any;
 
   Savesresponse(responce:any)
   {
-    this.url =  'http://localhost:4200/Api/login/Saveresponce';
+    this.url =  'http://localhost:4200/login/Savesresponse';
     return this.http.post(this.url,responce);
   }
 }

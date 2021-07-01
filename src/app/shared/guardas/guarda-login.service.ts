@@ -1,19 +1,23 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
+import { LoginComponent } from 'src/app/login/login/login.component';
 
 @Injectable ({
   providedIn: 'root'
 })
 export class GuardaLoginService implements CanActivate {
 
-  constructor() { }
+  user:any;
 
-  canActivate(
-    route:ActivatedRouteSnapshot,
-    state:RouterStateSnapshot
-  ):Observable<boolean>|boolean
+  constructor(private login:LoginComponent) { }
+
+  canActivate()
   {
-    return true
+    let authInfo:any = this.login.Savesresponse(this.user);
+    if(authInfo && authInfo.roles && authInfo.roles.length > 0){
+      return true;
+    }
+    return false
   }
 }
