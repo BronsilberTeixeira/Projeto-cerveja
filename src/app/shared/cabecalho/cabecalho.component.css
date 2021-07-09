@@ -4,7 +4,10 @@
 }
 
 .sair{
- color: #191919;
+  background-color: #F5930A;
+ color: #000000;
+ width: 40px;
+ height: 35px;
 }
 
 .img-cabecalho{
@@ -14,7 +17,8 @@
 }
 
 .img-login{
-  width: 50px;
-  height: 45px;
+  margin-right: 5px;
+  width: 40px;
+  height: 40px;
   border-radius: 50px;
 }

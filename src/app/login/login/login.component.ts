@@ -10,10 +10,11 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
   response:any;
   socialusers= new SocialUser();
-  logins:any;
-  Users:any;
+  isLoggedin:boolean = false;
+  User:any;
 
   constructor( private authService: SocialAuthService,
     private router: Router,
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
 
-  signInWithGoogle(socialProvider:string) {
+  signInWithGoogle(socialProvider:any) {
     let socialPlatformProvider:any ;
 
     if (socialProvider === 'google') {
@@ -36,21 +37,22 @@ export class LoginComponent implements OnInit {
 
 
 
-    this.OAuth.signIn(socialPlatformProvider).then(socialusers => {
-      console.log(socialProvider, socialusers);
-      console.log(socialusers);
-      this.Savesresponse(socialusers);
-
+    this.OAuth.authState.subscribe((user) => {
+      this.socialusers = user;
+      this.isLoggedin = (user != null);
+      console.log(this.socialusers);
     });
+
+    this.router.navigate(['/listagem'])
 
   }
 
 
-  Savesresponse( users:SocialUser) {
+  savesResponse( users:SocialUser) {
 
     this.login.Savesresponse(users).subscribe((res: any) => {
       console.log(res);
-      this.Users=res;
+      this.User = res;
       this.response = res.userDetail;
       localStorage.setItem('users', JSON.stringify(users));
       console.log(localStorage.setItem('socialusers', JSON.stringify(users)));

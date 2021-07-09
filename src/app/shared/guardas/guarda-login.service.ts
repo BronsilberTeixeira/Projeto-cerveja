@@ -12,9 +12,10 @@ export class GuardaLoginService implements CanActivate {
 
   constructor(private login:LoginComponent) { }
 
-  canActivate()
+  canActivate(route:ActivatedRouteSnapshot,
+    state:RouterStateSnapshot):Observable<boolean> | boolean
   {
-    let authInfo:any = this.login.Savesresponse(this.user);
+    let authInfo:any = this.login.signInWithGoogle(this.user);
     if(authInfo && authInfo.roles && authInfo.roles.length > 0){
       return true;
     }

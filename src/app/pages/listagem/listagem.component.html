@@ -19,8 +19,9 @@
         placeholder="Busque por sua cerveja favorita"
         aria-label="Search"
         >
-
-      <button class="btn btn-outline-warning pesquisar">
+      <button class="pesquisar"
+      mat-outlined-button
+      matTooltip="Clique para pesquisar">
         <span class="material-icons-outlined"
         (click)="pesquisaCerveja()">
           search
@@ -34,7 +35,7 @@
       Selecione o tipo de exibição
       <div class="d-flex">
         <button class="btn-troca"
-        [ngClass]="{'desativado':troca === false}"
+        [ngClass]="{'desativado':troca === true}"
         (click)="trocaCard()"
         mat-raised-button
         matTooltip="Resumido"
@@ -43,7 +44,7 @@
           </span></button>
 
         <button  class="btn-troca"
-          [ngClass]="{'desativado':troca === true, 'detalhado': troca === true}"
+          [ngClass]="{'desativado':troca === false, 'detalhado': troca === false}"
           (click)="trocaCard()"
           mat-raised-button
           matTooltip="Detalhado">
@@ -60,8 +61,9 @@ class="row resumido">
   <div class="card  card-cerv" *ngFor="let cervs of cervejas"  >
     <img class="imgCard" src="{{ cervs.image_url }}">
     <div class="card-body">
-      <h2 class="card-title">{{ cervs.name }}</h2>
-
+      <div class="cardTitulo">
+      <h3 class="card-title">{{ cervs.name }}</h3>
+      </div>
       <div class="div-botao">
         <a [routerLink]="['/detalhes', cervs.id]"
         class="btn  btn-outline-warning btn-card">Veja mais</a>
@@ -71,11 +73,11 @@ class="row resumido">
   </div>
 
 
-  <div class="card-horizontal"
+  <div class="card-horizontal detalhado"
    *ngFor="let cervs of cervejas"
    [ngClass]="{'invisivel': troca === false}" >
 
-    <div class="row detalhado" >
+    <div class="row " >
           <div class="innerLeft">
             <img class="imagem" src="{{ cervs.image_url }}">
           </div>
@@ -95,8 +97,7 @@ class="row resumido">
 
     </div>
 
-
-
+<hr class="linha">
   </div>
 
 </div>

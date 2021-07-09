@@ -17,6 +17,11 @@ body{
   margin-left: 10%;
 }
 
+.cardTitulo{
+  align-items: center;
+  text-align: center;
+  height: 85px;
+}
 
 .card-cerv{
   text-align: center;
@@ -40,9 +45,9 @@ body{
 }
 
 .div-botao{
+  margin: 0%;
   align-self: flex-end;
   text-align: center;
-
 }
 
 
@@ -87,7 +92,7 @@ body{
 
 #cervejas{
   color: #F5930A;
-  margin-top: 10px;
+  margin-top: 18px;
 }
 
 .navbar2{
@@ -95,9 +100,10 @@ body{
 }
 
 
+
 .pesquisar{
   height: 35px;
-  margin-top: 10px;
+  margin-top: 20px;
   color: #F5930A;
   background-color: #191919;
   border-left-color:#191919 ;
@@ -107,15 +113,12 @@ body{
   border-bottom-color: #F5930A;
 }
 .barraPesquisa{
-  margin-top: 10px;
+  padding-left: 4%;
+  margin-top: 20px;
   margin-bottom: 30px;
   background-color: #191919;
   color: #F5930A;
-   border-radius: 3px;
-  border-right-color:#191919 ;
-  border-left-color: #F5930A;
-  border-top-color: #F5930A;
-  border-bottom-color: #F5930A;
+  border-color: #F5930A;
   width: 400px;
   height: 35px;
 }
@@ -168,7 +171,14 @@ text-align: center;
     margin-left: 10px;
   }
 
+  .linha{
+    color: #F5930A;
+    width: 900px;
+    opacity: 4;
+  }
+
   .card-horizontal{
+    //border-bottom: solid  1px #F5930A;
     appearance: outline;
     outline: #F5930A;
     margin-top: 60px;

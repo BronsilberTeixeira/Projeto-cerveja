@@ -1,4 +1,4 @@
-import { Socialusers } from './../models/socialUser';
+
 import { Component, OnInit } from '@angular/core';
 import { SocialAuthService, SocialUser } from 'angularx-social-login';
 import { Router } from '@angular/router';
