@@ -1,4 +1,4 @@
-export interface Cervejas{
+export interface Cerveja {
   id: number
   name: string
   tagline: string
@@ -6,6 +6,6 @@ export interface Cervejas{
   abv: string
   ibu: string
   temp: number
-  ebc:number
+  ebc: number
   image_url: string
 }

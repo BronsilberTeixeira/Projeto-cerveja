@@ -1,106 +1,111 @@
 <body>
+  <app-cabecalho></app-cabecalho>
 
-<app-cabecalho></app-cabecalho>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-2">
+        <h2 id="cervejas">Nossas cervejas</h2>
+      </div>
 
-
-
-<div class="container mt-5">
-  <div class="row">
-
-    <div class="col-2">
-      <h2 id="cervejas">Nossas cervejas</h2>
-    </div>
-
-  <form class="pesquisa d-flex col-6">
-
-      <input class="barraPesquisa"
-        [formControl] ="queryField"
-        type="search"
-        placeholder="Busque por sua cerveja favorita"
-        aria-label="Search"
+      <form
+        class="pesquisa d-flex col-6"
+        [formGroup]="cervejaForm"
+        (ngSubmit)="pesquisaCerveja()"
+      >
+        <input
+          class="barraPesquisa"
+          formControlName="queryField"
+          type="search"
+          placeholder="Busque por sua cerveja favorita"
+          aria-label="Search"
+        />
+        <button
+          type="submit"
+          class="pesquisar"
+          mat-outlined-button
+          matTooltip="Clique para pesquisar"
         >
-      <button class="pesquisar"
-      mat-outlined-button
-      matTooltip="Clique para pesquisar">
-        <span class="material-icons-outlined"
-        (click)="pesquisaCerveja()">
-          search
+          <span class="material-icons-outlined" (click)="pesquisaCerveja()">
+            search
           </span>
         </button>
+      </form>
 
-  </form>
+      <div class="card card-troca col-4">
+        Selecione o tipo de exibição
+        <div class="d-flex">
+          <button
+            class="btn-troca"
+            [ngClass]="{ desativado: troca === true }"
+            (click)="trocaCard()"
+            mat-raised-button
+            matTooltip="Resumido"
+          >
+            <span class="material-icons-outlined"> view_week </span>
+          </button>
 
-
-    <div class="card  card-troca col-4">
-      Selecione o tipo de exibição
-      <div class="d-flex">
-        <button class="btn-troca"
-        [ngClass]="{'desativado':troca === true}"
-        (click)="trocaCard()"
-        mat-raised-button
-        matTooltip="Resumido"
-        ><span class="material-icons-outlined">
-          view_week
-          </span></button>
-
-        <button  class="btn-troca"
-          [ngClass]="{'desativado':troca === false, 'detalhado': troca === false}"
-          (click)="trocaCard()"
-          mat-raised-button
-          matTooltip="Detalhado">
-          <span class="material-icons-outlined">
-          view_list
-          </span></button>
-      </div>
-    </div>
-  </div>
-
-
-<div  [ngClass]="{'invisivel': troca === true}"
-class="row resumido">
-  <div class="card  card-cerv" *ngFor="let cervs of cervejas"  >
-    <img class="imgCard" src="{{ cervs.image_url }}">
-    <div class="card-body">
-      <div class="cardTitulo">
-      <h3 class="card-title">{{ cervs.name }}</h3>
-      </div>
-      <div class="div-botao">
-        <a [routerLink]="['/detalhes', cervs.id]"
-        class="btn  btn-outline-warning btn-card">Veja mais</a>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-  <div class="card-horizontal detalhado"
-   *ngFor="let cervs of cervejas"
-   [ngClass]="{'invisivel': troca === false}" >
-
-    <div class="row " >
-          <div class="innerLeft">
-            <img class="imagem" src="{{ cervs.image_url }}">
-          </div>
-          <div class="innerRight">
-            <div class="horizontal-card-footer">
-              <h4 class="card-title">{{ cervs.name }}</h4>
-              <span class="card-text">{{cervs.description}}</span>
-      </div>
-
-      <div class="row">
-        <div class="div-btn">
-          <a [routerLink]="['/detalhes', cervs.id]"
-           class="btn  btn-outline-warning btn-card">Veja mais</a>
+          <button
+            class="btn-troca"
+            [ngClass]="{
+              desativado: troca === false,
+              detalhado: troca === false
+            }"
+            (click)="trocaCard()"
+            mat-raised-button
+            matTooltip="Detalhado"
+          >
+            <span class="material-icons-outlined"> view_list </span>
+          </button>
         </div>
       </div>
     </div>
 
+    <div [ngClass]="{ invisivel: troca === true }" class="row resumido">
+      <div class="card card-cerv" *ngFor="let cervs of cervejas">
+        <img class="imgCard" src="{{ cervs.image_url }}" />
+        <div class="card-body">
+          <div class="cardTitulo">
+            <h3 class="card-title">{{ cervs.name }}</h3>
+          </div>
+          <div class="div-botao">
+            <a
+              [routerLink]="['/detalhes', cervs.id]"
+              class="btn btn-outline-warning btn-card"
+              >Veja mais</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
-<hr class="linha">
+    <div
+      class="card-horizontal detalhado"
+      *ngFor="let cervs of cervejas"
+      [ngClass]="{ invisivel: troca === false }"
+    >
+      <div class="row">
+        <div class="innerLeft">
+          <img class="imagem" src="{{ cervs.image_url }}" />
+        </div>
+        <div class="innerRight">
+          <div class="horizontal-card-footer">
+            <h4 class="card-title">{{ cervs.name }}</h4>
+            <span class="card-text">{{ cervs.description }}</span>
+          </div>
+
+          <div class="row">
+            <div class="div-btn">
+              <a
+                [routerLink]="['/detalhes', cervs.id]"
+                class="btn btn-outline-warning btn-card"
+                >Veja mais</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="linha" />
+    </div>
   </div>
-
-</div>
-
-
 </body>

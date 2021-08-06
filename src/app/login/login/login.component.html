@@ -1,23 +1,26 @@
 <body class="mat-typography">
-
   <div>
-  <div class="div-entrar">
-    <img class="img-vaider" src="https://i.postimg.cc/s2D8WQDN/dark-vaider.jpg">
-    <p class="titulo">Venha para o lado puro malte da força<p>
+    <div class="div-entrar">
+      <img
+        class="img-vaider"
+        src="https://i.postimg.cc/s2D8WQDN/dark-vaider.jpg"
+      />
+      <p class="titulo">Venha para o lado puro malte da força</p>
+      <p>
+        <button
+          class="btn-google row"
+          mat-raised-button
+          (click)="signInWithGoogle('google')"
+        >
+          <i class="bi bi-google"></i>
+          Login with google
+        </button>
 
-
-     <button class="btn-google row" mat-raised-button (click)="signInWithGoogle('google')">
-      <i class="bi bi-google"></i>
-      Login with google</button>
-
-     <!--button class="btn-face row" mat-raised-button color="accent" (click)="signInWithFB()">
+        <!--button class="btn-face row" mat-raised-button color="accent" (click)="signInWithFB()">
       <span class="icon-face material-icons-outlined">
       facebook
       </span>Login With Facebook</-button-->
-
+      </p>
     </div>
-
   </div>
 </body>
-
-

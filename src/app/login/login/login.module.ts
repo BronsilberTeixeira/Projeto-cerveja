@@ -1,16 +1,9 @@
-
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SocialloginService } from 'src/app/shared/models/sociallogin.service';
-
-
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-  ],
+  imports: [CommonModule],
   providers: [],
-
 })
-export class LoginModule { }
+export class LoginModule {}

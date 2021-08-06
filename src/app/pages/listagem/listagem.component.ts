@@ -1,18 +1,9 @@
-
-
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { Subject, pipe } from 'rxjs';
-import {distinctUntilChanged, debounceTime,  switchMap, elementAt,} from 'rxjs/operators';
-import { of } from 'rxjs';
-
-import { CervejasService } from 'src/app/shared/models/cervejas.service';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Cervejas } from './../../shared/models/Cervejas';
-
-
-
+import { CervejasService } from 'src/app/shared/service/cervejas.service';
+import { Cerveja } from '../../shared/models/cerveja.model';
 
 
 @Component({
@@ -21,49 +12,52 @@ import { Cervejas } from './../../shared/models/Cervejas';
   styleUrls: ['./listagem.component.scss'],
   preserveWhitespaces: true,
 })
-
-
-
 export class ListagemComponent implements OnInit {
-  queryField = new FormControl();
-  cervejas: Cervejas[] = [];
-  troca:boolean = false;
+  cervejas: Cerveja[] = [];
+  troca: boolean = false;
+  cervejaForm = new FormGroup({
+    queryField: new FormControl(),
+  });
 
-  constructor(private service: CervejasService,
+  constructor(
+    private service: CervejasService,
     private http: HttpClient,
-    private _snackBar: MatSnackBar) {}
+    private _snackBar: MatSnackBar
+  ) {}
 
-
-ngOnInit(){
-   this.listagem();
-}
-
-listagem(){
-   this.service.list()
-  .subscribe((dados:any) => this.cervejas = dados);
-}
-
-pesquisaCerveja(){
-  if(this.queryField.value == '' || this.queryField.value === null){
-    this.abrirSnackbar();
-  };
-
- if(this.cervejas.length.valueOf() === 0 ){
-  this.abrirSnackbar();
- };
-    this.service.pesquisaCerveja(this.queryField.value)
-    .subscribe((dados)=> this.cervejas = dados );
+  ngOnInit() {
+    this.listagem();
   }
 
-abrirSnackbar(){
-  this._snackBar.open('Coloque uma cerveja valida', 'sair', { duration: 2000, panelClass: ['my-snack-bar'] });
-  window.location.reload();
-}
+  listagem() {
+    this.service.list().subscribe((dados: any) => (this.cervejas = dados));
+  }
 
-trocaCard(){
-  this.troca = !this.troca;
-}
+  pesquisaCerveja() {
+    if (
+      this.cervejaForm.get('queryField').value == '' ||
+      this.cervejaForm.get('queryField').value === null
+    ) {
+      this.abrirSnackbar();
+    }
 
+    if (this.cervejas.length.valueOf() === 0) {
+      this.abrirSnackbar();
+    }
+    this.service
+      .pesquisaCerveja(this.cervejaForm.get('queryField').value)
+      .subscribe((dados) => (this.cervejas = dados));
+  }
 
+  abrirSnackbar() {
+    this._snackBar.open('Coloque uma cerveja valida', 'sair', {
+      duration: 2000,
+      panelClass: ['my-snack-bar'],
+    });
+    window.location.reload();
+  }
 
+  trocaCard() {
+    this.troca = !this.troca;
+  }
 }

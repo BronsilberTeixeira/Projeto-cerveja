@@ -1,14 +1,14 @@
-.navbar{
-  background-color: #F5930A;
+.navbar {
+  background-color: #f5930a;
 }
 
-.container{
+.container {
   text-align: center;
-  color: #F5930A;
+  color: #f5930a;
   margin-top: 2%;
 }
 
-.row{
+.row {
   margin-top: 30px;
   margin-left: 26%;
 }
@@ -17,77 +17,74 @@
   margin-top: 10px;
   width: 150px;
   height: 330px;
-
 }
 
-body{
+body {
   background-color: #191919;
 }
 
-  .innerLeft {
-    margin-right:-4px;
-    vertical-align:top;
-    width:80px;
-    text-align:center;
-    padding:5px;
-  }
-  .innerRight {
-    margin-left: 20%;
-    display:inline-block;
-    vertical-align:top;
-    width:70%;
-    text-align:left;
-    padding:5px;
-  }
-  .card-text {
-    display:inline-block;
-    background-color: #191919;
-    color: #F5930A;
-    margin-left: 10px;
-  }
-
-  .card-horizontal{
-    border-radius: 2px;
-    border-color: #F5930A;
-    margin-bottom: 50px;
-    margin-left: 60px;
-  }
-  .btn-card{
-    background-color:#191919 ;
-    border-color: #F5930A;
-    color: #F5930A;
-  }
-
-  .div-btn{
-    text-align: right;
-    margin-top: 10%;
-  }
-
-  .resp{
-    color: #D4D4D4;
-
-  }
-
-  .titulo{
-    margin-top: 25px;
-    color: #C5C5C5;
-    opacity: 0.6;
-  }
-
-  .mais_informacoes{
-    text-align: start;
-    color: #D4D4D4;
-  }
-
-  .descricao{
-    text-align: left;
-    color: #D4D4D4;
-  }
-
-.voltar{
-  margin-top: 20px;
-  border-color:#F5930A ;
-  color: #F5930A;
+.innerLeft {
+  margin-right: -4px;
+  vertical-align: top;
+  width: 80px;
+  text-align: center;
+  padding: 5px;
+}
+.innerRight {
+  margin-left: 20%;
   display: inline-block;
+  vertical-align: top;
+  width: 70%;
+  text-align: left;
+  padding: 5px;
+}
+.card-text {
+  display: inline-block;
+  background-color: #191919;
+  color: #f5930a;
+  margin-left: 10px;
 }
 
+.card-horizontal {
+  border-radius: 2px;
+  border-color: #f5930a;
+  margin-bottom: 50px;
+  margin-left: 60px;
+}
+.btn-card {
+  background-color: #191919;
+  border-color: #f5930a;
+  color: #f5930a;
+}
+
+.div-btn {
+  text-align: right;
+  margin-top: 10%;
+}
+
+.resp {
+  color: #d4d4d4;
+}
+
+.titulo {
+  margin-top: 25px;
+  color: #c5c5c5;
+  opacity: 0.6;
+}
+
+.mais_informacoes {
+  text-align: start;
+  color: #d4d4d4;
+}
+
+.descricao {
+  text-align: left;
+  color: #d4d4d4;
+}
+
+.voltar {
+  margin-top: 20px;
+  border-color: #f5930a;
+  color: #f5930a;
+  display: inline-block;
+}
