@@ -18,8 +18,7 @@ export class CervejasService {
     const params = { beer_name };
     return this.http.get<Cerveja[]>(this.API, { params });
   }
-  detalhesCerveja(id: string) {
-    const params = {id}
-    return this.http.get<Cerveja[]>(this.API, { params });
+  detalhesCerveja(id:string){
+    return this.http.get<Cerveja[]>(`${this.API}?ids=${id}`)
   }
 }
