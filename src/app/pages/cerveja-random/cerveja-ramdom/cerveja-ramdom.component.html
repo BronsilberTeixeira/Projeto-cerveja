@@ -1,0 +1,41 @@
+<body>
+    <app-cabecalho></app-cabecalho>
+  
+    <div class="container" *ngFor="let cerv of cervejaAleatoria">
+      <h1>Cerveja aleatoria</h1>
+  
+      <div class="row">
+        <div class="innerLeft">
+          <img class="imagem" src="{{ cerv.image_url }}" />
+        </div>
+        <div class="innerRight">
+          <div class="horizontal-card-footer">
+            <h2 class="titulo card-text">Graduação de cor "EBC"</h2>
+            <br />
+            <h2 class="resp card-text">{{ cerv.ebc }}</h2>
+            <br />
+            <h2 class="titulo card-text">Teor alcoólico</h2>
+            <br />
+            <h2 class="resp card-text">{{ cerv.abv }}%</h2>
+            <br />
+            <h2 class="titulo card-text">Amargor</h2>
+            <br />
+            <h2 class="resp card-text">{{ cerv.ibu }}</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="mais_informacoes row">
+        <h2 class="subtitulo">Mais sobre <i class="bi bi-chat-left-dots"></i></h2>
+        {{ cerv.description }}.
+      </div>
+  
+      <div class="voltar">
+        <a routerLink="/listagem" class="btn btn-outline-warning">
+          <i class="bi bi-arrow-return-left"></i>
+          Voltar para ver suas cervejas
+        </a>
+      </div>
+    </div>
+  </body>
+  

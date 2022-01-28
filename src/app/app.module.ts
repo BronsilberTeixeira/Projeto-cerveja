@@ -23,6 +23,7 @@ import { DetalhesComponent } from './pages/detalhes/detalhes.component';
 import { ListagemComponent } from './pages/listagem/listagem.component';
 import { CabecalhoComponent } from './shared/cabecalho/cabecalho.component';
 import { SocialLoginService } from './shared/login-service/social-login.service';
+import { CervejaRamdomComponent } from './pages/cerveja-random/cerveja-ramdom/cerveja-ramdom.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SocialLoginService } from './shared/login-service/social-login.service'
     ListagemComponent,
     DetalhesComponent,
     CabecalhoComponent,
+    CervejaRamdomComponent,
   ],
   imports: [
     BrowserModule,

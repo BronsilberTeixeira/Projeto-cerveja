@@ -21,4 +21,8 @@ export class CervejasService {
   detalhesCerveja(id:string){
     return this.http.get<Cerveja[]>(`${this.API}?ids=${id}`)
   }
+
+  exibirCervejaAleatoria(){
+    return this.http.get<Cerveja[]>(`${this.API}/random`)
+  }
 }

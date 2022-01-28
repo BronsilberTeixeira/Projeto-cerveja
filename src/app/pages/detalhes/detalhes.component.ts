@@ -10,7 +10,7 @@ import { Cerveja } from '../../shared/models/cerveja.model';
 })
 export class DetalhesComponent implements OnInit {
   id: any;
-  cervejas: Cerveja[] = [];
+  cerveja: Cerveja[] = [];
   cerv: any;
 
   constructor(
@@ -23,6 +23,6 @@ export class DetalhesComponent implements OnInit {
 
     this.service
       .detalhesCerveja(this.id)
-      .subscribe((dados) => (this.cervejas = dados));
+      .subscribe((dados) => (this.cerveja = dados));
   }
 }
