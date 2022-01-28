@@ -20,10 +20,9 @@ export class DetalhesComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
-    let cerveja_id = this.id;
 
     this.service
-      .detalhesCerveja(cerveja_id)
+      .detalhesCerveja(this.id)
       .subscribe((dados) => (this.cervejas = dados));
   }
 }

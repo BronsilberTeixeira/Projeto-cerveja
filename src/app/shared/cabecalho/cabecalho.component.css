@@ -1,6 +1,8 @@
 
 .navbar{
+  display: flex;
   background-color: #F5930A;
+  height: 65px;
 }
 
 .sair{

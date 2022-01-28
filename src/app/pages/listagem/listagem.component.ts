@@ -44,8 +44,9 @@ export class ListagemComponent implements OnInit {
     if (this.cervejas.length.valueOf() === 0) {
       this.abrirSnackbar();
     }
+    let cerveja =  this.cervejaForm.get('queryField').value;
     this.service
-      .pesquisaCerveja(this.cervejaForm.get('queryField').value)
+      .pesquisaCerveja(cerveja)
       .subscribe((dados) => (this.cervejas = dados));
   }
 
